@@ -27,12 +27,14 @@ $color-black-purple: #080816;
 .button {
     box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
-    text-transform: uppercase;
-    text-align: center;
     color: $color-white;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
     background: $color-blue-liner;
     cursor: pointer;
+    text: {
+        transform: uppercase;
+        align: center;
+        shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    }
 
     &:hover {
         background: $color-blue-liner-revers;
@@ -40,8 +42,38 @@ $color-black-purple: #080816;
 }
 
 .label {
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 24px;
+    color: $color-white;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+
+    span {
+        display: inline-block;
+        padding: 0 12px;
+        background-color: $color-black;
+    }
 }
+
 .title {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+    color: $color-black-brown-light;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    color: $color-black-brown-light;
 }
 // =================================================================================================
 // Header ==========================================================================================
@@ -80,10 +112,12 @@ $color-black-purple: #080816;
 
         &__link {
             display: inline-block;
-            font-weight: 300;
-            font-size: 15px;
             text-decoration: none;
             color: $color-white;
+            font: {
+                weight: 300;
+                size: 15px;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -105,27 +139,34 @@ $color-black-purple: #080816;
 
         &__official {
             margin: 6px 0 0 0;
-            font-weight: 400;
-            font-size: 13px;
             color: rgba($color: $color-white, $alpha: 0.6);
+            font: {
+                weight: 400;
+                size: 13px;
+            }
         }
 
         &__call {
             margin: 22px 0 0 0;
-            font-weight: 300;
-            font-size: 12px;
             line-height: 14px;
             text-align: right;
             color: rgba($color: $color-white, $alpha: 0.6);
+            font: {
+                weight: 300;
+                size: 12px;
+            }
         }
 
         &__phone {
             display: block;
-            font-size: 22px;
-            text-align: right;
-            text-decoration: none;
+
             line-height: 24px;
             color: $color-white;
+            font-size: 22px;
+            text: {
+                align: right;
+                decoration: none;
+            }
 
             &:hover {
                 text-decoration: underline;
@@ -143,29 +184,37 @@ $color-black-purple: #080816;
 // Promo ===========================================================================================
 .promo {
     padding: 150px 0 135px 0;
-    background-image: url(../img/bg/uber_bgmain-bg.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     text-align: center;
+    background: {
+        image: url(../img/bg/uber_bgmain-bg.png);
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
 
     &__title {
         margin-bottom: 0;
-        font-weight: 700;
-        font-size: 60px;
         line-height: 60px;
         text-transform: uppercase;
         color: $color-white;
+        font: {
+            weight: 700;
+            size: 60px;
+        }
     }
 
     &__subtitle {
-        margin-top: 22px;
-        margin-bottom: 0;
-        font-weight: bold;
-        font-size: 36px;
         line-height: 36px;
         text-transform: uppercase;
         color: $color-white;
+        font: {
+            weight: bold;
+            font-size: 36px;
+        }
+        margin: {
+            top: 22px;
+            bottom: 0;
+        }
     }
 
     &__text {
@@ -184,37 +233,150 @@ $color-black-purple: #080816;
 // =================================================================================================
 // Reasons =========================================================================================
 .reasons {
-    &__label {
-    }
+    padding: 20px 0 38px 0;
+
+    // &__label {
+    // }
 
     &__title {
+        margin: {
+            top: 33px;
+            bottom: 16px;
+        }
     }
 
     &__item {
         display: flex;
         align-items: center;
+        height: 100%;
+        padding: 0 30px 30px 30px;
     }
 
     &__picture {
         display: flex;
+        flex-shrink: 0;
         align-items: center;
         justify-content: center;
-        flex-shrink: 0;
+        margin-right: 25px;
         width: 116px;
         height: 116px;
         border-radius: 50%;
         background-color: $color-blue-main;
     }
 
-    &__img {
-    }
+    // &__img {
+    // }
 
     &__text {
+        @media (min-width: 992px) {
+            align-self: flex-start;
+        }
     }
 
     &__name {
+        margin: 0;
+        font-size: 17px;
+        line-height: 21px;
+        color: $color-blue-main;
     }
 
     &__descr {
+        margin: 4px 0 0 0;
+        line-height: 21px;
+        color: $color-black-brown-dark;
+        text-align: justify;
+        font: {
+            weight: 300;
+            size: 15px;
+        }
+    }
+}
+// =================================================================================================
+// Mobail ======================================================================================
+.mobile {
+    padding: 48px 0 79px 0;
+    background: url(../img/bg/mobile_bg.png) center center/cover no-repeat;
+
+    .row {
+        margin-top: 30px;
+    }
+
+    &__title {
+        margin: 33px 0 0 0;
+        line-height: 48px;
+    }
+
+    &__subtitle {
+        line-height: 21px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 19px auto;
+        padding: 92px 0 35px 0;
+        width: 320px;
+        height: 280px;
+
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: center center;
+        }
+
+        @for $i from 1 to 7 {
+            &_#{$i} {
+                background-image: url(../img/mobil/card_#{$i}.png);
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: 24px;
+        line-height: 31px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+
+    &__item-plus {
+        position: relative;
+        margin: 0 auto;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: $color-black;
+        cursor: pointer;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease 0s;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-blue-main;
+            transition: background-color 0.5s ease 0s;
+        }
+        &::before {
+            width: 14px;
+            height: 2px;
+        }
+        &::after {
+            width: 2px;
+            height: 14px;
+        }
+
+        &:hover {
+            transform: rotate(180deg);
+            &::before,
+            &::after {
+                background-color: $color-red-main;
+            }
+        }
     }
 }
