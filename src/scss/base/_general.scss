@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.button {
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: $color-white;
+    background: $color-blue-liner;
+    cursor: pointer;
+    text: {
+        transform: uppercase;
+        align: center;
+        shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+    }
+
+    &:hover {
+        background: $color-blue-liner-revers;
+    }
+}
+
+.label {
+    margin: 0 auto;
+    font-size: 11px;
+    line-height: 24px;
+    color: $color-white;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+
+    span {
+        display: inline-block;
+        padding: 0 12px;
+        background-color: $color-black;
+    }
+}
+
+.title {
+    margin: 33px 0 0 0;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 48px;
+    color: $color-black-brown-light;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+    @include media(max, 992) {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    @include media(max, 768) {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+    color: $color-black-brown-light;
+
+    @include media(max, 992) {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    @include media(max, 768) {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}

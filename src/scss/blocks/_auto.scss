@@ -1,0 +1,49 @@
+.auto {
+    padding: 54px 0 137px 0;
+    background: {
+        image: url(../img/bg/auto_bg.png);
+        position-y: bottom;
+        repeat: no-repeat;
+        size: 100% 45%;
+        color: $color-black-dark-blue;
+    }
+
+    @include media(max, 768) {
+        padding: 54px 0 35px 0;
+    }
+
+    &__label {
+        color: $color-black-dark-blue;
+        span {
+            background-color: $color-white;
+        }
+    }
+
+    &__title {
+        color: $color-white;
+    }
+
+    &__subtitle {
+        color: $color-white;
+        @include media(max, 768) {
+            display: none;
+        }
+    }
+
+    &__img {
+        display: block;
+        margin: 54px auto 0 auto;
+
+        @include media(max, 992) {
+            width: calc(300px + (759 - 300) * ((100vw - 320px) / (992 - 320)));
+        }
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 17px;
+        line-height: 24px;
+        text-align: center;
+        color: $color-black-brown-light;
+    }
+}

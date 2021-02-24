@@ -1,0 +1,94 @@
+.promo {
+    padding: 150px 0 135px 0;
+    text-align: center;
+    background: {
+        image: url(../img/bg/uber_bgmain-bg.png);
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    @include media(max, 992) {
+        padding: 150px 0 75px 0;
+    }
+
+    @include media(max, 768) {
+        padding: 100px 0 75px 0;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        line-height: 60px;
+        text-transform: uppercase;
+        color: $color-white;
+        font: {
+            weight: 700;
+            size: 60px;
+        }
+
+        @include media(max, 1200) {
+            font-size: 50px;
+            line-height: 50px;
+        }
+        @include media(max, 992) {
+            font-size: 40px;
+            line-height: 40px;
+        }
+
+        @include media(max, 768) {
+            font-size: 32px;
+            line-height: 32px;
+        }
+    }
+
+    &__subtitle {
+        line-height: 36px;
+        text-transform: uppercase;
+        color: $color-white;
+        font: {
+            weight: bold;
+            font-size: 36px;
+        }
+        margin: {
+            top: 22px;
+            bottom: 0;
+        }
+        @include media(max, 992) {
+            margin-top: 10px;
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        @include media(max, 768) {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
+    &__text {
+        margin-top: 18px;
+        font-size: 18px;
+        line-height: 24px;
+        color: $color-white;
+
+        @include media(max, 992) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        @include media(max, 768) {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    &__button {
+        margin: 115px auto 0 auto;
+        width: 259px;
+        line-height: 63px;
+
+        @include media(max, 992) {
+            margin: 60px auto 0 auto;
+        }
+    }
+}

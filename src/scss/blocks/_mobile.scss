@@ -1,0 +1,90 @@
+.mobile {
+    padding: 48px 0 79px 0;
+    background: url(../img/bg/mobile_bg.png) center center/cover no-repeat;
+
+    .row {
+        margin-top: 30px;
+    }
+
+    &__title {
+        line-height: 48px;
+    }
+
+    &__subtitle {
+        line-height: 21px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto 19px auto;
+        padding: 92px 0 35px 0;
+        max-width: 320px;
+        height: 280px;
+
+        background: {
+            size: cover;
+            repeat: no-repeat;
+            position: center center;
+        }
+
+        @for $i from 1 to 7 {
+            &_#{$i} {
+                background-image: url(../img/mobil/card_#{$i}.png);
+            }
+        }
+    }
+
+    &__item-title {
+        font-size: 24px;
+        line-height: 31px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $color-white;
+        @include media(max, 768) {
+            font-size: 18px;
+            line-height: 31px;
+        }
+    }
+
+    &__item-plus {
+        position: relative;
+        margin: 0 auto;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: $color-black;
+        cursor: pointer;
+        transform: rotate(0deg);
+        transition: transform 0.5s ease 0s;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-blue-main;
+            transition: background-color 0.5s ease 0s;
+        }
+        &::before {
+            width: 14px;
+            height: 2px;
+        }
+        &::after {
+            width: 2px;
+            height: 14px;
+        }
+
+        &:hover {
+            transform: rotate(180deg);
+            &::before,
+            &::after {
+                background-color: $color-red-main;
+            }
+        }
+    }
+}
